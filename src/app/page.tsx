@@ -3,7 +3,8 @@ import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button"
+import { Icons } from "@/components/icons"
 import { ModeToggle } from "@/components/mode-toggle"
 
 export default function Home() {
@@ -18,14 +19,18 @@ export default function Home() {
           {siteConfig.description}
         </p>
         <div className="flex gap-2">
+          <ModeToggle />
+          <Button>
+            <Link href={"/main"}>Open</Link>
+          </Button>
           <Link
             href={siteConfig.links.github}
             target="_blank"
-            className={cn(buttonVariants({ size: "default" }))}
+            className={cn(buttonVariants({ variant: "ghost" }))}
           >
-            Get Started
+            <span>GitHub</span>
+            <Icons.link className="ml-2 h-4 w-4" />
           </Link>
-          <ModeToggle />
         </div>
       </div>
     </main>
