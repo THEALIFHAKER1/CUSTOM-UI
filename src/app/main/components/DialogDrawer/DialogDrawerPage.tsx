@@ -11,15 +11,14 @@ import {
   DialogDrawerTitle,
   DialogDrawerTrigger,
 } from "@/components/custom/DialogDrawer/DialogDrawer"
-
-import MainLayout from "../../layout"
+import { HeadingText } from "@/components/custom/HeadingText/HeadingText"
 
 export default function DialogDrawerPage() {
   return (
-    <MainLayout
-      headingText="DialogDrawer"
-      subtext="Responsive Dialog[Desktop] and Drawer[Mobile]"
-    >
+    <div className="space-y-4">
+      <HeadingText subtext="Responsive Dialog[Desktop] and Drawer[Mobile]">
+        DialogDrawer
+      </HeadingText>
       <DialogDrawer>
         <DialogDrawerTrigger asChild>
           <Button>Open modal</Button>
@@ -69,6 +68,6 @@ export default function DialogDrawerPage() {
     </DialogDrawer>
           `}
       />
-    </MainLayout>
+    </div>
   )
 }

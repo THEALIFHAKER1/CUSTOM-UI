@@ -79,7 +79,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div vaul-drawer-wrapper="" className=" p-4 ">
+            {children}
+          </div>
         </ThemeProvider>
       </body>
     </html>
